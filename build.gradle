@@ -1,6 +1,11 @@
 plugins {
     id 'com.finpay.spring-conventions'
     id 'com.finpay.testing-conventions'
+    // Applied INLINE (with explicit version) per platform convention:
+    // org.springframework.boot is NOT applied by spring-conventions to avoid a
+    // Gradle classloading-isolation quirk in the composite build. See
+    // finpay-platform/build-logic/com.finpay.spring-conventions.gradle (ADR-0012).
+    alias(libs.plugins.spring.boot)
 }
 
 description = 'FinPay identity-service.'
@@ -16,4 +21,5 @@ jar {
 dependencies {
     implementation libs.spring.boot.starter.web
     implementation libs.common.web
+    testImplementation libs.common.test
 }

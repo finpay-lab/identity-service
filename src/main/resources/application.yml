@@ -3,3 +3,13 @@ server:
 spring:
   application:
     name: identity-service
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+finpay:
+  ai:
+    endpoint: ${FINPAY_AI_ENDPOINT:}
+    api-key: ${FINPAY_AI_API_KEY:}
+    model: ${FINPAY_AI_MODEL:vision-doc-extractor}
+    timeout: 30s
