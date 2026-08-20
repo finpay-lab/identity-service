@@ -1,11 +1,11 @@
 package com.finpay.identity.service;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class IdentityServiceApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(IdentityServiceApplication.class, args);
-    }
+/**
+ * Placeholder retained for the legacy flat-package entry (the canonical
+ * com.finpay.identity.service.IdentityServiceApplication lives in the nested
+ * com/finpay/identity/service/ directory). This avoids a duplicate-class
+ * compile error against that file. Not used as the boot entry point.
+ */
+final class IdentityServiceLegacyBootstrap {
+    private IdentityServiceLegacyBootstrap() {}
 }
