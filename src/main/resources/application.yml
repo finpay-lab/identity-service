@@ -4,7 +4,7 @@ spring:
   application:
     name: identity-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/finpay_identity
+    url: jdbc:postgresql://postgres.finpay-infra.svc.cluster.local:5432/finpay_identity
     username: finpay
     password: finpay
     driver-class-name: org.postgresql.Driver
