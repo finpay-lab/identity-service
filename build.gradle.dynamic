@@ -1,0 +1,5 @@
+tasks.register('printCp') {
+    doLast {
+        configurations.compileClasspath.files.findAll { it.name.contains('grpc-contracts') }.each { println "CPJAR: " + it.absolutePath }
+    }
+}
